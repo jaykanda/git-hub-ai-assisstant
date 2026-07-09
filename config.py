@@ -1,0 +1,1 @@
+REPO_URL = "https://github.com/jaykanda/digital-twin-python-agent.git"
