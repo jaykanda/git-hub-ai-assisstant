@@ -1,19 +1,6 @@
-from git import Repo
-import os
-from config import REPO_URL
-import traceback
+import clone_repo
+import file_loader
+from file_loader import repository_load
 
-repo_url = REPO_URL
-repo_name = repo_url.split("/")[-1].replace(".git", "")
-print(f"repo url ===> {repo_url}")
-local_repo = os.path.join("repository", repo_name)
-
-try: 
-    repo = Repo.clone_from(repo_url, local_repo, branch = "master", single_branch = True)
-    print(f"Repo cloned successfully! ===> {repo}")
-    print(f"GIT STATUS ===> {repo.git.status()}")
-    print(os.listdir(local_repo))
-
-except Exception as e:
-    print(e)
-    traceback.print_exc() 
+doc_content = repository_load()
+print(f"DOCUMENT LIST FROM APP ===> {doc_content}")
