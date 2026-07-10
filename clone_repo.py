@@ -12,4 +12,4 @@ try:
 
 except Exception as e:
     print(e)
-    traceback.print_exc() 
+    traceback.print_exc()
