@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
 @dataclass
-class Chunk:
+class VectorMeta:
     path: str
     id: int
-    chunk_text: str
     size: int
+    vector_data: list
