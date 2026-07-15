@@ -12,10 +12,9 @@ def chunk_creation():
     for document in repository_load():
         chunks = splitter.split_text(document.content)
         for index, chunk in enumerate(chunks, start=1):
-            # print(document.path, "\n")
-            # print(f"------------ Chunk Id - {index}------------ Chunk size - {len(chunk)}", "\n")
-            # print(chunk, "\n")
-            chunk_data = Chunk(path=document.path, id=index, chunk_text=chunk, size=len(chunk))
+            print(document.path)
+            print(f"------------ Chunk Id - {index}------------", "\n")
+            print(chunk)
+            chunk_data = Chunk(path=document.path, chunk_id=index, chunk_text=chunk, chunk_size=len(chunk))
             all_chunks.append(chunk_data)
-    return all_chunks
                             

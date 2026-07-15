@@ -3,6 +3,6 @@ from dataclasses import dataclass
 @dataclass
 class Chunk:
     path: str
-    id: int
+    chunk_id: int
     chunk_text: str
-    size: int
+    chunk_size: int
