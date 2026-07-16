@@ -7,6 +7,7 @@ embedding_model = HuggingFaceEmbeddings(
         model="sentence-transformers/all-MiniLM-L6-v2"
 )
 def vector_creation():
+    all_vectors = []
     # for chunk in chunk_creation():
     #     vector = embedding_model.embed_query(
     #         chunk.chunk_text
@@ -23,5 +24,6 @@ def vector_creation():
         # print(len(vector))
         vector_mdata = VectorMeta(path=chunk.path, id=chunk.id, size=len(vector), vector_data=vector)
         # print(f"VECTORS METADATA ===> {vector_mdata}")
-    return vector_mdata
+        all_vectors.append(vector_mdata)
+    return all_vectors
 

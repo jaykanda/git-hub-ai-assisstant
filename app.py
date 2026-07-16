@@ -13,5 +13,5 @@ user_query = input("Ask : ")
 results = retrieval_search(user_query)
 
 for result in results:
-    print(result.page_content, "\n")
+    print(result, "\n")
     print("======================")    

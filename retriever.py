@@ -5,7 +5,7 @@ def retrieval_search(userquery):
     vector_store_indexes = vector_Store()
     results = vector_store_indexes.similarity_search(
         userquery,
-        k = 1
+        k = 3
     )
     # print(f"retrieved results ===> {results}")
     return results
